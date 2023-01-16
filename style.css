@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-first:#4A7C59;
+    --color-second:#FAF3DD;
+    --color-header:#f7f7f7;
+    --color-black:rgba(0,0,0,.5);
+    --color-white:#fff;
+    --color-success:#2ecc71;
+    --color-error:#e74c3c;
+}
+body{
+    background-color: var(--color-first);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "open sabs" sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px var(--color-black);
+    width: 400px;
+    max-width: 100%;
+}
+.header{
+    background-color: var(--color-header);
+    border-bottom:2px solid var(--color-second);
+    padding: 20px 40px;
+}
+.header h2{
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+.form{
+    padding: 30px 40px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    font-size: 14px;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--color-white);
+    font-family: inherit;
+    padding-left: 10px;
+    height: 40px;
+    width: 100%;
+}
+.form-control i{
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.form button{
+    background-color: var(--color-first);
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    font-family: inherit;
+    border: 1px solid var(--color-second);
+    color: var(--color-white);
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.form-control.success input{
+    border-color: var(--color-success);
+}
+.form-control.error input{
+    border-color: var(--color-error);
+}
+.form-control.success i.fa-circle-check{
+    color: var(--color-success);
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation{
+    color: var(--color-error);
+    visibility: visible;
+}
+.form-control.error small{
+    color: var(--color-error);
+    visibility: visible;
+}
